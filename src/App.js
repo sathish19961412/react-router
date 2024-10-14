@@ -7,6 +7,8 @@ import User from './components/User/User';
 import { BrowserRouter,Routes,Route,Link} from 'react-router-dom';
 import Oldbooks from './components/Book/Oldbooks';
 import Newbooks from './components/Book/Newbooks';
+import Login from './components/Login/Login';
+import Dashboard from './components/Dashboard/Dashboard';
 function App() {
   return (
     <>
@@ -20,6 +22,7 @@ function App() {
                 <li><Link to='/user/1'>User</Link></li>
                 <li><Link to="/books/oldbooks">Oldbook</Link></li>
                 <li><Link to="/books/newbooks">Newbook</Link></li>
+                <li><Link to="/login">Login</Link></li>
              </ul>
              <Routes>
                 <Route path='/' element={<Home/>}></Route>
@@ -31,6 +34,8 @@ function App() {
                    <Route path='oldbooks' element={<Oldbooks/>}></Route>
                    <Route path='newbooks' element={<Newbooks/>}></Route>
                 </Route>
+                <Route path='/login' element={<Login/>}></Route>
+                <Route path='/dashboard' element={<Dashboard/>}></Route>
              </Routes>
         </BrowserRouter>
     </center>
